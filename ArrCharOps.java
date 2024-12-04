@@ -154,7 +154,7 @@ public class ArrCharOps {
         if(arr==empty){return hashCode1;}
         for (int i = 0; i < arr.length; i++)
         {
-            hashCode1=arr[i]*(7^(arr.length-cnt));
+            hashCode1=hashCode1+arr[i]*(7^(arr.length-cnt));
             cnt++;
         }
         return hashCode1;
@@ -193,8 +193,9 @@ public class ArrCharOps {
         for (int i = 0; i < str1.length(); i++)
         {
             
-            if(str1.charAt(i)<str2.charAt(i)){return -1;}
-            else if(str1.charAt(i)>str2.charAt(i)){return 1;}
+            if(str1.charAt(i)<str2.charAt(i)&&Character.toLowerCase(str1.charAt(i))!=str2.charAt(i))
+            {return -1;}
+            else if(str1.charAt(i)>str2.charAt(i)&&Character.toLowerCase(str1.charAt(i))!=str2.charAt(i)){return 1;}
         }
         return 0;
     }
