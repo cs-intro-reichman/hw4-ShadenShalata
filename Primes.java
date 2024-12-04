@@ -32,6 +32,7 @@ public class Primes {
                 System.out.println(i);
             }
         }
+        System.out.println("");
 
 
     }
