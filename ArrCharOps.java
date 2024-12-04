@@ -37,15 +37,13 @@ public class ArrCharOps {
      */
     public static char charAt(char[] arr, int index) {
         // Replace the following statement with your code
-        char inp='A';
-        if(arr!=null)
-        {
+       
+        
         inp=arr[0];
-        for (int i = 0; i < index; i++) {
+        for (int i = 0; i < index+1; i++) {
             inp=arr[i];
         }
-        }
-        else{return 'A';}
+        
         return inp;
     }
 
@@ -71,7 +69,7 @@ public class ArrCharOps {
         {
             if(arr[i]==ch)
             {
-                indx=i+1;
+                indx=i;
                 i=arr.length-1;
             }
         }
