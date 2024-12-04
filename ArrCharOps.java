@@ -37,14 +37,8 @@ public class ArrCharOps {
      */
     public static char charAt(char[] arr, int index) {
         // Replace the following statement with your code
-       
         
-        inp=arr[0];
-        for (int i = 0; i < index+1; i++) {
-            inp=arr[i];
-        }
-        
-        return inp;
+        return arr[index];
     }
 
     /** If the two arrays have the same value in every index, 
@@ -70,7 +64,7 @@ public class ArrCharOps {
             if(arr[i]==ch)
             {
                 indx=i;
-                i=arr.length-1;
+                i=arr.length;
             }
         }
         return indx;
@@ -156,7 +150,8 @@ public class ArrCharOps {
         // Replace the following statement with your code
         int hashCode1=0;
         int cnt=1;
-        if(arr==null){return hashCode1;}
+        char [] empty= new char[0];
+        if(arr==empty){return hashCode1;}
         for (int i = 0; i < arr.length; i++)
         {
             hashCode1=arr[i]*(7^(arr.length-cnt));
@@ -197,6 +192,7 @@ public class ArrCharOps {
         if(str2.length()<str1.length()){return 1;}
         for (int i = 0; i < str1.length(); i++)
         {
+            
             if(str1.charAt(i)<str2.charAt(i)){return -1;}
             else if(str1.charAt(i)>str2.charAt(i)){return 1;}
         }
