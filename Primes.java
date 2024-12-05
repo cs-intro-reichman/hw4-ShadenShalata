@@ -6,7 +6,7 @@ public class Primes {
         arr[0]=false;
         arr[1]=false;
         int cnt=0;
-        System.out.println("Prime numbers up to "+n);
+        System.out.println("Prime numbers up to "+n+":");
         for (int i = 2; i < arr.length; i++)
         {
             arr[i]=true;
