@@ -5,6 +5,7 @@ public class ArrCharOps {
         String str = "clearly";
         char[] arr1 = {'c','l','e','a','r','l','y'};
         char[] arr2 = {'U','n','d','e','r','s','t', 'o', 'o', 'd'};
+        
         System.out.println(str);  // Prints the string
         println(arr1);            // Prints an array of characters
         System.out.println(charAt(arr1,2));      
@@ -22,7 +23,9 @@ public class ArrCharOps {
         System.out.println(compareTo("Zoo", "zoo"));
         System.out.println(hashCode(arr1));
         System.out.println(hashCode(arr2));
+       
     }
+    
 
     /** Prints the given array of characters, and moves the cursor to the next line.
      */
@@ -150,11 +153,12 @@ public class ArrCharOps {
         // Replace the following statement with your code
         int hashCode1=0;
         int cnt=1;
+        int n=arr.length;
         char [] empty= new char[0];
         if(arr==empty){return hashCode1;}
         for (int i = 0; i < arr.length; i++)
         {
-            hashCode1=hashCode1+(arr[i]*(7^(arr.length-cnt)));
+            hashCode1+=(arr[i]*(7^(n-cnt)));
             cnt++;
         }
         return hashCode1;
@@ -190,6 +194,8 @@ public class ArrCharOps {
     public static int compareTo(String str1, String str2) {
         // Replace the following statement with your code
         if(str1==null||str2==null){return -2;}
+        str1=str1.toLowerCase();
+        str2=str2.toLowerCase();
         for (int i = 0; i < str1.length()&&i<str2.length(); i++)
         {
             
