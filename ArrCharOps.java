@@ -193,7 +193,7 @@ public class ArrCharOps {
      */
     public static int compareTo(String str1, String str2) {
         // Replace the following statement with your code
-        if(str1==null||str2==null){return -2;}
+        if(str1.isEmpty()||str2.isEmpty()){return -2;}
         
         for (int i = 0; i < str1.length()&&i<str2.length(); i++)
         {
