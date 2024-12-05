@@ -154,7 +154,7 @@ public class ArrCharOps {
         if(arr==empty){return hashCode1;}
         for (int i = 0; i < arr.length; i++)
         {
-            hashCode1=hashCode1+arr[i]*(7^(arr.length-cnt));
+            hashCode1=hashCode1+(arr[i]*(7^(arr.length-cnt)));
             cnt++;
         }
         return hashCode1;
@@ -188,15 +188,15 @@ public class ArrCharOps {
     public static int compareTo(String str1, String str2) {
         // Replace the following statement with your code
         if(str1==null||str2==null){return -2;}
-        if(str1.length()<str2.length()){return -1;}
-        if(str2.length()<str1.length()){return 1;}
-        for (int i = 0; i < str1.length(); i++)
+        for (int i = 0; i < str1.length()&&i<str2.length(); i++)
         {
             
             if(str1.charAt(i)<str2.charAt(i)&&Character.toLowerCase(str1.charAt(i))!=str2.charAt(i))
             {return -1;}
             else if(str1.charAt(i)>str2.charAt(i)&&Character.toLowerCase(str1.charAt(i))!=str2.charAt(i)){return 1;}
         }
+        if(str1.length()<str2.length()){return -1;}
+        if(str2.length()<str1.length()){return 1;}
         return 0;
     }
 }

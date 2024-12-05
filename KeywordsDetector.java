@@ -7,8 +7,7 @@ public class KeywordsDetector {
             "We need to leverage our core competencies",
             "Let's talk about data and algorithms",
             "Chatbots are great but must be used carefully",
-            "This blockchain-based solution will disrupt the industry",
-            "The team showed great Synergy in the last project",
+            "This blockchain-based solution will disrupt the industry","The team showed great Synergy in the last project",
             "Use simple words without hype and fluff",
             "Our new technology presents a significant paradigm shift",
             "Effective presentations must be clear, concise, and humble"
