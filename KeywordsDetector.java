@@ -23,7 +23,7 @@ public class KeywordsDetector {
         // Replace this comment with your code
         String check;
         String comp;
-        
+        String check1;
         int cnt=0;
         int k=0;
         int run=0;
@@ -32,6 +32,7 @@ public class KeywordsDetector {
         for (int i = 0; i < sentences.length; i++)
         {
             check=sentences[i];
+            check1=check;
             check=check.toLowerCase();
             for(int j = 0; j < keywords.length; j++)
             {
@@ -49,7 +50,7 @@ public class KeywordsDetector {
                     }
                     if(cnt==comp.length())
                     {
-                        System.out.println(check);
+                        System.out.println(check1);
                        found=1;
                     }
                     cnt=0;
