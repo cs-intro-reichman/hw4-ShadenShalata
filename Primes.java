@@ -5,6 +5,8 @@ public class Primes {
         boolean [] arr=new boolean[n+1];
         arr[0]=false;
         arr[1]=false;
+        int cnt=0;
+        System.out.println("Prime numbers up to "+n);
         for (int i = 2; i < arr.length; i++)
         {
             arr[i]=true;
@@ -30,9 +32,11 @@ public class Primes {
             if(arr[i]==true)
             {
                 System.out.println(i);
+                cnt++;
             }
         }
-        System.out.println("");
+        System.out.println("There are "+cnt+" primes between 2 and "+n);
+        
 
 
     }
