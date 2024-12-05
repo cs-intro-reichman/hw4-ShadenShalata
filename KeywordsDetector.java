@@ -28,6 +28,7 @@ public class KeywordsDetector {
         int k=0;
         int run=0;
         int save=0;
+        int found=0;
         for (int i = 0; i < sentences.length; i++)
         {
             check=sentences[i];
@@ -36,7 +37,7 @@ public class KeywordsDetector {
             {
                 comp=keywords[j];
                 comp=comp.toLowerCase();
-                while(k<check.length())
+                while(k<check.length()&&found==0)
                 {
                     save=k;
 
@@ -49,13 +50,14 @@ public class KeywordsDetector {
                     if(cnt==comp.length())
                     {
                         System.out.println(check);
-                        break;
+                       found=1;
                     }
                     cnt=0;
                     run=0;
                     k=save+1;
                 }
                 k=0;
+                found=0;
                
             }
         }
